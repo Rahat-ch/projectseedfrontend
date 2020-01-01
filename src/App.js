@@ -1,23 +1,14 @@
 import React from 'react';
+import { Router } from "@reach/router";
+import Home from "./pages/home";
+import Main from "./pages/main";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = ({ children }) => (
+  <Router>
+    <Home path="/" />
+    <Main path="/main" />
+  </Router>
+);
 
 export default App;
